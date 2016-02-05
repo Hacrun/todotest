@@ -1,28 +1,18 @@
 package com.example.todolist.test.testcase.login;
 
-import com.example.todolist.LoginActivity;
-import com.robotium.solo.Solo;
+import com.example.todolist.test.test.BasicTestCase;
 
-import android.test.ActivityInstrumentationTestCase2;
 
-public class LoginTestCase2 extends ActivityInstrumentationTestCase2<LoginActivity> {
-
-	private Solo solo;
-	
-	public LoginTestCase2() {
-		super(LoginActivity.class);
-	}
-
-	protected void setUp() throws Exception {
-		super.setUp();
-		solo = new Solo(getInstrumentation(), getActivity());
-	}
+public class LoginTestCase2 extends BasicTestCase {
 
 	public void testLoginSuccess(){
-		solo.enterText(0, "1");
-		solo.enterText(1, "1");
-		solo.clickOnButton(0);
-		assertEquals(true, solo.searchText("MainActivity"));
+		uiHelper.getPageCommon().waitForText("ToDoList");
+		uiHelper.getPageLogin().clearName();
+		uiHelper.getPageLogin().enterName("1");
+		uiHelper.getPageLogin().clearPwd();
+		uiHelper.getPageLogin().enterPwd("1");
+		uiHelper.getPageLogin().ClickLogin();
+		assertTrue(uiHelper.getPageCommon().searchText("MainActivity"));
 	}
 	
 	protected void tearDown() throws Exception {
