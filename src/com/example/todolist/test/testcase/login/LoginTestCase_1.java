@@ -1,4 +1,4 @@
-package com.example.todolist.test;
+package com.example.todolist.test.testcase.login;
 
 import junit.framework.TestCase;
 
