@@ -51,6 +51,23 @@ public class PageMain {
 	public void clickLongListTV(String text){
 		solo.clickLongOnText(text);
 	}
-
+	
+	public void delAllText(){
+		if(list.getChildCount() != 0){
+			int list1 = list.getChildCount();
+			for(int i=0; i<list1; i++){
+//				System.out.println(i);
+//				System.out.println("当前文本数量为:"+list.getChildCount());
+				solo.waitForText("MainActivity");
+				TextView tv = (TextView) solo.getView(R.id.toDoItemDetailTv);
+				solo.clickLongOnView(tv);
+				solo.waitForText("删除");
+				solo.clickOnText("删除");
+				solo.waitForText("确认");
+				solo.clickOnButton("确认");
+				System.out.println(tv.getText().toString());
+			}
+		}
+	}
 	
 }

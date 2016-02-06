@@ -21,6 +21,10 @@ public class UIHelper {
 		this.solo = solo;
 	}
 	
+	public Solo getSolo(){
+		return solo;
+	}
+	
 	public PageLogin getPageLogin(){
 		if(pageLogin == null){
 			pageLogin = new PageLogin(solo);

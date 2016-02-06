@@ -7,6 +7,10 @@
     <uses-sdk android:minSdkVersion="18" />
 
     <instrumentation
+        android:name="com.example.todolist.test.Runner.Runner1"
+        android:targetPackage="com.example.todolist" />
+    
+    <instrumentation
         android:name="android.test.InstrumentationTestRunner"
         android:targetPackage="com.example.todolist" />
 

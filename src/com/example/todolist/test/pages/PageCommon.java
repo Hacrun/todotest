@@ -21,4 +21,8 @@ public class PageCommon {
 	public void clickOnEdit(){
 		solo.clickOnText("±à¼­");
 	}
+	
+	public void clickOnDelte(){
+		solo.clickOnText("É¾³ý");
+	}
 }
