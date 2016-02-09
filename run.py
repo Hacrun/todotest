@@ -19,7 +19,7 @@ os.system("ant clean debug")
 os.system("adb install ../todolist/bin/todolist-debug.apk")
 os.system("adb install bin/todolistTest-debug.apk")
 
-#start test
+#start test test
 os.system("adb shell am instrument -w -e reportDir sdcard -e reportFile report.xml com.example.todolist.test/.Runner.Runner1")
 
 #pull test report
