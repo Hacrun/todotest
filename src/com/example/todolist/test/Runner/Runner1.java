@@ -14,8 +14,8 @@ public class Runner1 extends JUnitReportTestRunner{
 		// TODO Auto-generated method stub
 		TestSuite suite = new TestSuite();
 		suite.addTest(TestSuiteLogin.getTestSuiteLogin());
-		//suite.addTest(TestSuiteAdd.getTestSuiteAdd());
-		//suite.addTest(TestSuiteEdit.getTestSuiteEdit());
+		suite.addTest(TestSuiteAdd.getTestSuiteAdd());
+		suite.addTest(TestSuiteEdit.getTestSuiteEdit());
 		return suite;
 		
 				
