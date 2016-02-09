@@ -51,7 +51,7 @@ public class PageLogin {
 	}
 	
 	public void Login(String name, String password){
-		solo.waitForText("µ«»Î");
+		//solo.waitForText("µ«»Î");
 		clearName();
 		enterName(name);
 		clearPwd();

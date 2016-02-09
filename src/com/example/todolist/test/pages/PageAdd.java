@@ -22,7 +22,7 @@ public class PageAdd {
 	}
 	
 	public void enterToDetail(String detail){
-		solo.waitForText("NewToDoList");
+		//solo.waitForText("NewToDoList");
 		solo.enterText(detailET, detail);
 	}
 	
