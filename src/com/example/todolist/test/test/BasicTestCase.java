@@ -1,10 +1,14 @@
 package com.example.todolist.test.test;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 import com.example.todolist.LoginActivity;
 import com.example.todolist.test.utils.NetworkUtil;
 import com.example.todolist.test.utils.Util;
 import com.robotium.solo.Solo;
 
+import android.os.Environment;
 import android.os.PowerManager;
 import android.test.ActivityInstrumentationTestCase2;
 
@@ -21,6 +25,7 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<LoginActivit
 	protected void setUp() throws Exception {
 		try{
 			super.setUp();
+			logCurrentCaseName();
 			solo = new Solo(getInstrumentation(), getActivity());
 			uiHelper = new UIHelper(solo);
 			//唤醒设备
@@ -97,4 +102,27 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<LoginActivit
 		}
 	}
 
+	//获得外部存储根目录的路径
+	//获得类的名字
+	public void logCurrentCaseName(){
+		FileWriter fw = null;
+		try {
+			fw = new FileWriter(Environment.getExternalStorageDirectory() + "/" + "Crash.txt");
+			fw.getClass().getSimpleName();
+			fw.flush();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if(fw != null){
+				try {
+					fw.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
 }

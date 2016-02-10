@@ -1,13 +1,13 @@
 package com.example.todolist.test.Runner;
 
+import com.example.todolist.test.test.FinalTest;
 import com.example.todolist.test.testcase.addtodolist.TestSuiteAdd;
 import com.example.todolist.test.testcase.edittodolist.TestSuiteEdit;
 import com.example.todolist.test.testcase.login.TestSuiteLogin;
-import com.zutubi.android.junitreport.JUnitReportTestRunner;
 
 import junit.framework.TestSuite;
 
-public class Runner1 extends JUnitReportTestRunner{
+public class Runner1 extends CustomRunner{
 
 	@Override
 	public TestSuite getAllTests() {
@@ -15,7 +15,11 @@ public class Runner1 extends JUnitReportTestRunner{
 		TestSuite suite = new TestSuite();
 		suite.addTest(TestSuiteLogin.getTestSuiteLogin());
 		suite.addTest(TestSuiteAdd.getTestSuiteAdd());
-		suite.addTest(TestSuiteEdit.getTestSuiteEdit());
+		//suite.addTest(TestSuiteEdit.getTestSuiteEdit());
+		suite.addTestSuite(FinalTest.class);
+		if(isNeedRegenerate){
+			regenerateTestCaseList(suite);
+		}
 		return suite;
 		
 				
