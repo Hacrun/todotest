@@ -60,7 +60,7 @@ public class CustomRunner extends JUnitReportTestRunner{
 				caseNameList.add(caseName);
 			}
 		}
-		caseNameList.add("com.example.todolist.test.FinalTest");
+		caseNameList.add("com.example.todolist.test.test.FinalTest");
 		return caseNameList;
 
 	}

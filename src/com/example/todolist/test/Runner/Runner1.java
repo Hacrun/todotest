@@ -7,24 +7,19 @@ import com.example.todolist.test.testcase.login.TestSuiteLogin;
 
 import junit.framework.TestSuite;
 
-public class Runner1 extends CustomRunner{
+public class Runner1 extends CustomRunner {
 
 	@Override
 	public TestSuite getAllTests() {
-		// TODO Auto-generated method stub
 		TestSuite suite = new TestSuite();
 		suite.addTest(TestSuiteLogin.getTestSuiteLogin());
 		suite.addTest(TestSuiteAdd.getTestSuiteAdd());
-		//suite.addTest(TestSuiteEdit.getTestSuiteEdit());
 		suite.addTestSuite(FinalTest.class);
-		if(isNeedRegenerate){
-			regenerateTestCaseList(suite);
+		if (isNeedRegenerate) {
+			suite = regenerateTestCaseList(suite);
 		}
 		return suite;
-		
-				
 	}
 
-	
 	
 }

@@ -10,9 +10,12 @@ public class FinalTest extends BasicTestCase{
 	protected void setUp() throws Exception {
 		// TODO Auto-generated method stub
 		super.setUp();
-		File fileName = new File(Environment.getExternalStorageDirectory() + "/" + "Crash.txt");
-		if(fileName.exists()){
-			fileName.delete();
+		File file = new File(Environment.getExternalStorageDirectory() + "/" + "crash.txt");
+		System.out.println(file.getName().toString());
+		Thread.sleep(5000);
+		System.out.println("wait five second");
+		if(file.exists()){
+			file.delete();
 		}
 	}
 	

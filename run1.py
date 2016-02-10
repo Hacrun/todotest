@@ -27,7 +27,7 @@ re_run = True
 count = 0
 re_generate_tests = False
 while re_run:
-	exe_str = "adb shell am instrument -w -e reportDir sdcard -e reportFile report_" + str(count) + ".xml  -e isNeedReGenerate " + str(re_generate_tests) + " com.example.todolist.test/.runners.Runner1"
+	exe_str = "adb shell am instrument -w -e reportDir sdcard -e reportFile report_" + str(count) + ".xml  -e isNeedReGenerate " + str(re_generate_tests) + " com.example.todolist.test/.Runner.Runner1"
 	os.system(exe_str)
 	os.system("adb pull sdcard/report_"+str(count)+".xml report_"+str(count)+".xml")
 	os.system("adb pull sdcard/crash.txt .")

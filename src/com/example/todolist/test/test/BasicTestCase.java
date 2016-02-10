@@ -65,7 +65,7 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<LoginActivit
 			throw smte;
 		}
 	}
-
+	@Override
 	protected void tearDown() throws Exception {
 		if(wakeScreenObject != null){
 			wakeScreenObject.release();
@@ -108,7 +108,7 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<LoginActivit
 		FileWriter fw = null;
 		try {
 			fw = new FileWriter(Environment.getExternalStorageDirectory() + "/" + "Crash.txt");
-			fw.getClass().getSimpleName();
+			fw.write(this.getClass().getSimpleName());
 			fw.flush();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
