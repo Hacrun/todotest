@@ -107,7 +107,7 @@ public class BasicTestCase extends ActivityInstrumentationTestCase2<LoginActivit
 	public void logCurrentCaseName(){
 		FileWriter fw = null;
 		try {
-			fw = new FileWriter(Environment.getExternalStorageDirectory() + "/" + "Crash.txt");
+			fw = new FileWriter(Environment.getExternalStorageDirectory() + "/" + "crash.txt");
 			fw.write(this.getClass().getSimpleName());
 			fw.flush();
 		} catch (IOException e) {
