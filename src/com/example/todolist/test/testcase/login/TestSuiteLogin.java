@@ -8,6 +8,7 @@ public class TestSuiteLogin {
 		TestSuite suite = new TestSuite();
 		suite.addTestSuite(LoginTestCase_1.class);
 		suite.addTestSuite(LoginTestCase2.class);
+		suite.addTestSuite(LoginTestCase_crash_3.class);
 		return suite;
 	}
 }
