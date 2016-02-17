@@ -16,18 +16,19 @@ os.system("adb uninstall com.example.todolist")
 os.system("adb uninstall com.example.todolist.test")
 
 #build test APP
-os.system("ant clean debug")
+os.system("ant clean emma debug")
 
 #install APP and test APP
-os.system("adb install ../todolist/bin/todolist-debug.apk")
+#os.system("adb install ../todolist/bin/todolist-debug.apk")
+#os.system("adb install bin/todolistTest-debug.apk")
+os.system("adb install ../todolist/bin/todolist-instrumented.apk")
 os.system("adb install bin/todolistTest-debug.apk")
-
 #start test
 re_run = True
 count = 0
 re_generate_tests = False
 while re_run:
-	exe_str = "adb shell am instrument -w -e reportDir sdcard -e reportFile report_" + str(count) + ".xml  -e isNeedReGenerate " + str(re_generate_tests) + " com.example.todolist.test/.Runner.Runner1"
+	exe_str = "adb shell am instrument -w -e coverage true -e coverageFile sdcard/coverage.ec -e reportDir sdcard -e reportFile report_" + str(count) + ".xml  -e isNeedReGenerate " + str(re_generate_tests) + " com.example.todolist.test/.Runner.Runner1"
 	os.system(exe_str)
 	os.system("adb pull sdcard/report_"+str(count)+".xml report_"+str(count)+".xml")
 	os.system("adb pull sdcard/crash.txt .")

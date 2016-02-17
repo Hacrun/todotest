@@ -9,12 +9,15 @@ F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\R$attr.class
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\R$drawable.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\R$string.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\R.class \
+F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\Runner\CustomRunner.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\Runner\Runner1.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\test\BasicTestCase$RunTestException.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\test\BasicTestCase$SetUpException.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\test\BasicTestCase$TearDownException.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\test\BasicTestCase.class \
+F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\test\FinalTest.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\test\UIHelper.class \
+F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\test\Utils.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\testcase\addtodolist\AddTestCase.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\testcase\addtodolist\TestSuiteAdd.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\testcase\edittodolist\DeleteText.class \
@@ -22,6 +25,8 @@ F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\testcase\edi
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\testcase\edittodolist\TestSuiteEdit.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\testcase\login\LoginTestCase2.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\testcase\login\LoginTestCase_1.class \
+F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\testcase\login\LoginTestCase_4.class \
+F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\testcase\login\LoginTestCase_crash_3.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\testcase\login\TestSuiteLogin.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\utils\NetworkUtil.class \
 F:\AutomationProject\todotest\bin\classes\com\example\todolist\test\utils\Util.class \

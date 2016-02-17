@@ -5,6 +5,7 @@ import com.robotium.solo.Solo;
 
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class PageLogin {
 
@@ -20,6 +21,18 @@ public class PageLogin {
 		nameET = (EditText) solo.getView(R.id.nameET);
 		passwordET = (EditText) solo.getView(R.id.passwordET);
 		loginBtn = (Button) solo.getView(R.id.loginBtn);
+	}
+	
+	public TextView getPWD(){
+		return passwordET;
+	}
+	
+	public TextView getNAME(){
+		return nameET;
+	}
+	
+	public Button getButtonBtn(){
+		return loginBtn;
 	}
 	
 	public void enterName(String name){
@@ -38,7 +51,7 @@ public class PageLogin {
 		solo.clearEditText(passwordET);
 	}
 	
-	public void ClickLogin(){
+	public void clickLogin(){
 		solo.clickOnView(loginBtn);
 	}
 	
@@ -51,12 +64,12 @@ public class PageLogin {
 	}
 	
 	public void Login(String name, String password){
-		//solo.waitForText("µ«»Î");
+		solo.waitForText("µ«»Î");
 		clearName();
 		enterName(name);
 		clearPwd();
 		enterPwd(password);
-		ClickLogin();
+		clickLogin();
 	}
 
 	

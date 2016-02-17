@@ -7,7 +7,6 @@ public class LoginTestCase_1 extends BasicTestCase {
 
 	public void testtestCase1(){
 		uiHelper.getPageLogin().Login("abcd","1234");
-		//assertTrue("没有登录成功", solo.searchText("用户名或者密码错误", true));
 		assertTrue("没有登录成功", uiHelper.getPageCommon().searchText("用户名或者密码错误"));
 	}
 	
