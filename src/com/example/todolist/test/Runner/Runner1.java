@@ -14,7 +14,7 @@ public class Runner1 extends CustomRunner {
 		TestSuite suite = new TestSuite();
 		suite.addTest(TestSuiteLogin.getTestSuiteLogin());
 		suite.addTest(TestSuiteAdd.getTestSuiteAdd());
-		//suite.addTest(TestSuiteEdit.getTestSuiteEdit());
+		suite.addTest(TestSuiteEdit.getTestSuiteEdit());
 		suite.addTestSuite(FinalTest.class);
 		if (isNeedRegenerate) {
 			suite = regenerateTestCaseList(suite);
